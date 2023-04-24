@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState, useEffect } from "react";
 // redux
 import { useSelector } from "react-redux";
 // components
@@ -10,16 +10,10 @@ import { getExchangeRates } from "../api";
 
 const supportedCurrencies = ["USD", "EUR", "JPY", "CAD", "GBP", "MXN"];
 
-export function ExchangeRate() {
-  // const [amount, setAmount] = useState("1.50");
-  // const [currencyCode, setCurrencyCode] = useState("USD");
+export const ExchangeRate = () => {
   const [currencyData, setCurrencyData] = useState({ USD: 1.0 });
-
   const amount = useSelector((state) => state.amount);
   const currencyCode = useSelector((state) => state.currencyCode);
-
-  const setAmount = () => { };
-  const setCurrencyCode = () => { };
 
   // fetch the exchange rates each time currency code changes
   useEffect(() => {
@@ -27,16 +21,6 @@ export function ExchangeRate() {
       setCurrencyData(rates);
     });
   }, [currencyCode]);
-
-  const handleCurrencyCode = useCallback(
-    (e) => setCurrencyCode(e.target.value),
-    []
-  );
-
-  const handleAmountChange = useCallback((e) => {
-    let newAmount = e.target.value;
-    setAmount(newAmount);
-  }, []);
 
   return (
     <>
@@ -46,12 +30,11 @@ export function ExchangeRate() {
           <CurrencyCodePicker
             supportedCurrencies={supportedCurrencies}
             currencyCode={currencyCode}
-            onChange={handleCurrencyCode}
           />
         </h1>
       </section>
       <section>
-        <AmountField amount={amount} onChange={handleAmountChange} />
+        <AmountField amount={amount} />
       </section>
       <section>
         <RateTable currencyData={currencyData} amount={amount} />
