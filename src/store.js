@@ -1,7 +1,7 @@
 import { createStore } from "redux";
 
 const initialState = {
-  amount: "12.00",
+  amount: "18.70",
   currencyCode: "USD"
 }
 
