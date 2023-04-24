@@ -5,7 +5,7 @@ export const AmountField = ({ amount }) => {
   const dispatch = useDispatch();
 
   const onChange = (e) => {
-    dispatch({ type: "amountChanged", payload: e.target.value });
+    dispatch({ type: "rates/amountChanged", payload: e.target.value });
   }
 
   return (

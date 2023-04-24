@@ -5,7 +5,7 @@ export const CurrencyCodePicker = ({ supportedCurrencies, currencyCode }) => {
   const dispatch = useDispatch();
 
   const onChange = (e) => {
-    dispatch({ type: "currencyCodeChanged", payload: e.target.value })
+    dispatch({ type: "rates/currencyCodeChanged", payload: e.target.value })
   }
 
   return (
