@@ -7,6 +7,7 @@ I will use a simple "Currency exchange calculator" application that automaticall
 simple UI, clean css/js.
 
 <hr/>
+
 ![exchange](https://user-images.githubusercontent.com/58791451/233875560-5df1188d-497c-4823-96fa-e0595be761f3.png)
 
 ### Setup
