@@ -1,5 +1,5 @@
 const initialState = {
-  fullName: "Frank Herbert",
+  fullName: "Tolkien",
   loggedIn: false
 }
 

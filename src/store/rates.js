@@ -3,7 +3,7 @@ import { getExchangeRates } from "../api";
 const initialState = {
   amount: "18.70",
   currencyCode: "USD",
-  currencyData: { USD: 1.0 },
+  currencyData: [{ displayLabel: "US Dollars", code: "USD", rate: 1.0 }],
   supportedCurrencies: ["USD", "EUR", "JPY", "CAD", "GBP", "MXN"]
 }
 
@@ -13,8 +13,24 @@ export const ratesReducer = (state = initialState, action) => {
       return { ...state, amount: action.payload };
     case CURRENCY_CODE_CHANGED:
       return { ...state, currencyCode: action.payload };
+    case "rates/labelReceived": {
+      const { displayLabel, currencyCode } = action.payload;
+      return {
+        ...state,
+        currencyData: state.currencyData.map((data) => {
+          if (currencyCode === data.code) {
+            return { ...data, displayLabel };
+          }
+          return data;
+        }),
+      };
+    }
     case "rates/ratesReceived": {
       const codes = Object.keys(action.payload).concat(state.currencyCode);
+      const currencyData = [];
+      for (let code in action.payload) {
+        currencyData.push({ code, rate: action.payload[code] });
+      }
       return { ...state, currencyData: action.payload, supportedCurrencies: codes };
     }
     default:
