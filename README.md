@@ -9,7 +9,7 @@ simple UI, clean css/js.
 <hr/>
 
 ![exchange](https://user-images.githubusercontent.com/58791451/233875560-5df1188d-497c-4823-96fa-e0595be761f3.png)
-![ratesYpn](https://user-images.githubusercontent.com/58791451/236110085-e5f9c1bf-4831-4d53-9fbc-626448490f2f.png)
+![ratesYp](https://user-images.githubusercontent.com/58791451/236110224-57005c0d-2901-4018-83da-05403f1e63ad.png)
 ![ratesGB](https://user-images.githubusercontent.com/58791451/236110094-fd39718c-419e-443d-b9c4-ea6405a7447d.png)
 
 ### Setup
