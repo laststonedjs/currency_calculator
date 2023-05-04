@@ -11,7 +11,6 @@ simple UI, clean css/js.
 ![ratesMxn](https://user-images.githubusercontent.com/58791451/236110368-ba26f07b-9332-4474-834e-0ff65a74b2ab.png)
 ![ratesYp](https://user-images.githubusercontent.com/58791451/236110224-57005c0d-2901-4018-83da-05403f1e63ad.png)
 ![ratesGB](https://user-images.githubusercontent.com/58791451/236110094-fd39718c-419e-443d-b9c4-ea6405a7447d.png)
-![exchange](https://user-images.githubusercontent.com/58791451/233875560-5df1188d-497c-4823-96fa-e0595be761f3.png)
 
 ### Setup
 
