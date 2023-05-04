@@ -5,8 +5,7 @@ import {
   getAmount,
   getCurrencyCode,
   getCurrencyData,
-  supportedCurrencies,
-  changeCurrencyCode
+  supportedCurrencies
 } from "../store/rates";
 // components
 import { RateTable } from "./RateTable";
@@ -14,15 +13,14 @@ import { CurrencyCodePicker } from "./CurrencyCodePicker";
 import { AmountField } from "./AmountField";
 
 export const ExchangeRate = () => {
-  const dispatch = useDispatch();
   const amount = useSelector(getAmount);
   const currencyCode = useSelector(getCurrencyCode);
   const currencyData = useSelector(getCurrencyData);
 
   // fetch the exchange rates the first time
-  useEffect(() => {
-    dispatch(changeCurrencyCode(currencyCode));
-  }, []);
+  // useEffect(() => {
+  //   dispatch(changeCurrencyCode(currencyCode));
+  // }, []);
 
   return (
     <>
