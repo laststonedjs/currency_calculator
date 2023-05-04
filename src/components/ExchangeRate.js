@@ -4,8 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   getAmount,
   getCurrencyCode,
-  getCurrencyData,
-  supportedCurrencies
+  getCurrencyData
 } from "../store/rates";
 // components
 import { RateTable } from "./RateTable";
@@ -28,7 +27,6 @@ export const ExchangeRate = () => {
         <h1 className="ExchangeRate-header">
           Exchange Rates{" "}
           <CurrencyCodePicker
-            supportedCurrencies={supportedCurrencies}
             currencyCode={currencyCode}
           />
         </h1>
